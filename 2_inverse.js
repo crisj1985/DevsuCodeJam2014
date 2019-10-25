@@ -1,6 +1,9 @@
 const _ = require('lodash');
 
 function Encode(valor) {
+
+    if (_.isEmpty(valor))
+        return "";
     let palabra = _.lowerCase(valor);
     let invertido = "";
     _.forEachRight(_.toArray(palabra), x => invertido += x);
